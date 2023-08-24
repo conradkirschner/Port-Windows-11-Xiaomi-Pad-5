@@ -124,11 +124,12 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set {default} testsigning on
 adb shell "dd if=/dev/block/bootdevice/by-name/boot$(getprop ro.boot.slot_suffix) of=/tmp/boot.img"
 ```
 
-### Pull backup to computer
+### Pull backup to computer (you will need it later)
 
 ```cmd
 adb pull /tmp/boot.img
 ```
+- ⚠ check if boot.img file exists on your computer
 
 ### Identify your panel
 
